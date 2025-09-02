@@ -1,89 +1,110 @@
-/* === Fundo geral === */
+/* Fundo geral */
 html, body {
-    background-color: #F0F0EC;
-    margin: 0;
-    padding: 0;
+  background-color: #F0F0EC;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  user-select: none;
 }
 
-/* === Header === */
+/* Header */
 .meu-header {
-    background-color: #005f61;
+  background-color: #005f61;
+  position: relative;
+  z-index: 2000;
 }
 
-/* === Sidebar === */
+/* Navbar collapse mobile */
+#navbarNav {
+  position: relative;
+  z-index: 2001;
+}
+
+/* Sidebar */
 #sidebar {
-    min-height: 100vh;       /* altura total da tela */
-    width: 60px;              /* largura retraída */
-    overflow-x: hidden;       /* evita que texto vaze */
-    transition: width 0.3s;
-    font-size: 17px;
-    padding-top: 20px;        /* espaço no topo */
+  min-height: 100vh;
+  width: 60px;
+  overflow-x: hidden;
+  transition: width 0.3s;
+  font-size: 17px;
+  padding-top: 20px;
+  position: relative;
+  z-index: 1000;
+  background-color: #005f61;
+  color: #ffb81c;
+  
 }
 
-/* Largura quando expandida */
 #sidebar.collapsed {
-    width: 200px !important;  
+  width: 200px !important;
+  margin-right: 10px;
 }
 
-/* Links da sidebar */
 #sidebar .nav-link {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;      /* evita quebra de linha */
-    overflow: hidden;
-    text-overflow: clip;
-    padding: 10px 0;
-    color: white;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  padding: 10px 0;
+  color: white;
+  text-decoration: none;
 }
 
-/* Texto da sidebar */
 #sidebar .link-text {
-    display: none;            /* inicialmente escondido */
+  display: none;
 }
 
-/* Sidebar expandida: mostra texto */
 #sidebar.collapsed .link-text {
-    display: inline;
-    margin-left: 6px;         /* deslocamento leve para alinhar com ícones retraídos */
+  display: inline;
+  margin-left: 8px;
 }
 
-/* Ajuste visual dos links */
 #sidebar:not(.collapsed) .nav-link {
-    text-align: center;       /* centraliza ícones quando retraída */
-    margin-left: 0;
+  justify-content: center;
 }
 
 #sidebar.collapsed .nav-link {
-    text-align: left;         /* ícone + texto alinhados à esquerda */
+  justify-content: flex-start;
+  padding-left: 10px;
 }
 
-/* Pequeno ajuste para ícones */
 #sidebar .nav-link i {
-    font-size: 18px;
+  font-size: 18px;
 }
 
-/* Botão toggle */
+/* Toggle da sidebar */
 #toggle-btn {
-
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: center;
-}
-/* Botão toggle sempre centralizado e fixo no topo */
-#toggle-btn {
-    width: 40px;             /* largura fixa do botão */
-    height: 40px;            /* altura fixa */
-    /* centraliza horizontalmente e espaçamento abaixo */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    font-size: 18px;         /* tamanho do símbolo ☰ */
-    border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 18px;
+  border-radius: 5px;
+  
 }
 
-/* Opcional: mantém a cor do botão consistente */
 #toggle-btn.btn-light {
-    background-color: #f8f9fa;
-    color: #000;
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+/* Conteúdo principal */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 992px) {
+  #sidebar {
+    position: absolute;
+    z-index: 1500;
+  }
+}
+/* Ou apenas ícones dentro da sidebar */
+#sidebar .bi {
+  color: #ffb81c;
 }

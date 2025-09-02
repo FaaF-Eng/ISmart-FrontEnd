@@ -1,90 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoring Ismart</title>
-    <link rel="icon" type="image/png" href="public/img/logo-telematica.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/pages/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoramento</title>
+  <link rel="icon" type="image/png" href="public/img/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="src/pages/style.css">
 </head>
 <body>
-    <!-- Header / Navbar -->
-    <header class="meu-header">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#005f61;">
-            <div class="container">
-            <!-- Logo ou Nome -->
-            <img src="public/img/logo-telematica-grande.png" alt="Logo Telematica" class="h-auto w-25">
-            <!-- Botão do menu mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+  <!-- Header / Navbar -->
+  <header class="meu-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <img src="public/img/logo-telematica-grande.png" alt="Logo Telematica" class="h-auto w-25">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/." style="color: #ffb81c;">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://telematica.com.br/empresa/#quem_somos" style="color: #ffb81c;">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://telematica.com.br/" style="color: #ffb81c;">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://telematica.com.br/contato/" style="color: #ffb81c;">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-            <!-- Links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" id="batata" aria-current="page" href="/.">Início</a> <!--active deixa o "negrito"-->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://telematica.com.br/empresa/#quem_somos">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://telematica.com.br/">Serviços</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://telematica.com.br/contato/">Contato</a>
-                </li>
-                </ul>
-            </div>
-            </div>
-        </nav>
-    </header>
-    
-<!-- Sidebar -->
-<div class="d-flex">
-  <!-- Barra lateral -->
-  <div id="sidebar" class="bg-dark text-white p-2" style="width: 54px; transition: width 0.3s;">
-    <button id="toggle-btn" class="btn btn-sm btn-light mb-5">☰</button>
+  <!-- Corpo principal -->
+  <div class="d-flex">
+    <!-- Sidebar -->
+    <div id="sidebar" class=" p-2">
+      <button id="toggle-btn" class="btn btn-sm btn-light mb-5">☰</button>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link " href="#">
+            <i class="bi bi-speedometer2"></i>
+            <span class="link-text " style="color: #ffb81c;" >Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">
+            <i class="bi bi-file-earmark-bar-graph"></i>
+            <span class="link-text"  style="color: #ffb81c;" >Relatórios</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">
+            <i class="bi bi-gear"></i>
+            <span class="link-text" style="color: #ffb81c;" >Configurações</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="bi bi-question-circle"></i>
+            <span class="link-text" style="color: #ffb81c;" >Ajuda</span>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-    <!-- AQUI substituímos o UL -->
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">
-          <i class="bi bi-speedometer2"></i>
-          <span class="link-text">Dashboard</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">
-          <i class="bi bi-file-earmark-bar-graph"></i>
-          <span class="link-text">Relatórios</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">
-          <i class="bi bi-gear"></i>
-          <span class="link-text">Configurações</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">
-          <i class="bi bi-question-circle"></i>
-          <span class="link-text">Ajuda</span>
-        </a>
-      </li>
-    </ul>
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+      <h1>Bem-vindo ao sistema </h1>
+      <p>Telematica.</p>
+    </div>
   </div>
 
-  <!-- Conteúdo principal -->
-  <div class="flex-grow-1 p-3">
-    <h1>Bem-vindo ao sistema</h1>
-    <p>Telematica.</p>
-  </div>
-</div>    
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+  <script src="src/pages/main.js"></script>
 </body>
-<script src="src/pages/main.js"></script>
 </html>
