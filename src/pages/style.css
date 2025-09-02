@@ -108,3 +108,28 @@ html, body {
 #sidebar .bi {
   color: #ffb81c;
 }
+
+/*Estilo de botão*/
+/* Link inicial */
+.highlight-link {
+  display: flex;
+  align-items: center;
+  color: #ffb81c;           /* cor inicial do ícone e texto */
+  transition: all 0.1s ease;
+}
+
+/* Hover no link todo, incluindo ícone e texto */
+.highlight-link:hover,
+.highlight-link:hover i,
+.highlight-link:hover .link-text {
+    color: #000 !important;  /* força a cor preta no hover */
+    background-color: #ffb81c; 
+    transform: scale(1.1);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* Espaçamento entre ícone e texto */
+.highlight-link i {
+  margin-right: 6px;
+}
