@@ -1,5 +1,11 @@
 console.log("JavaScript habilitado");
 
+//Para sidebar
+document.getElementById("toggle-btn").addEventListener("click", function() {
+  document.getElementById("sidebar").classList.toggle("collapsed");
+});
+
+
 function decodeUplink(input) {
   var bytes = input.bytes;
   var data = {};

@@ -7,6 +7,8 @@
     <link rel="icon" type="image/png" href="public/img/logo-telematica.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="src/pages/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
 </head>
 <body>
     <!-- Header / Navbar -->
@@ -25,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/.">Início</a> <!--active deixa o "negrito"-->
+                    <a class="nav-link active" id="batata" aria-current="page" href="/.">Início</a> <!--active deixa o "negrito"-->
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://telematica.com.br/empresa/#quem_somos">Sobre</a>
@@ -42,6 +44,47 @@
         </nav>
     </header>
     
+<!-- Sidebar -->
+<div class="d-flex">
+  <!-- Barra lateral -->
+  <div id="sidebar" class="bg-dark text-white p-2" style="width: 54px; transition: width 0.3s;">
+    <button id="toggle-btn" class="btn btn-sm btn-light mb-5">☰</button>
+
+    <!-- AQUI substituímos o UL -->
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">
+          <i class="bi bi-speedometer2"></i>
+          <span class="link-text">Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">
+          <i class="bi bi-file-earmark-bar-graph"></i>
+          <span class="link-text">Relatórios</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">
+          <i class="bi bi-gear"></i>
+          <span class="link-text">Configurações</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">
+          <i class="bi bi-question-circle"></i>
+          <span class="link-text">Ajuda</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div class="flex-grow-1 p-3">
+    <h1>Bem-vindo ao sistema</h1>
+    <p>Telematica.</p>
+  </div>
+</div>    
 </body>
 <script src="src/pages/main.js"></script>
 </html>

@@ -1,6 +1,89 @@
-html,body{
+/* === Fundo geral === */
+html, body {
     background-color: #F0F0EC;
+    margin: 0;
+    padding: 0;
 }
-.meu-header{
+
+/* === Header === */
+.meu-header {
     background-color: #005f61;
+}
+
+/* === Sidebar === */
+#sidebar {
+    min-height: 100vh;       /* altura total da tela */
+    width: 60px;              /* largura retraída */
+    overflow-x: hidden;       /* evita que texto vaze */
+    transition: width 0.3s;
+    font-size: 17px;
+    padding-top: 20px;        /* espaço no topo */
+}
+
+/* Largura quando expandida */
+#sidebar.collapsed {
+    width: 200px !important;  
+}
+
+/* Links da sidebar */
+#sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;      /* evita quebra de linha */
+    overflow: hidden;
+    text-overflow: clip;
+    padding: 10px 0;
+    color: white;
+}
+
+/* Texto da sidebar */
+#sidebar .link-text {
+    display: none;            /* inicialmente escondido */
+}
+
+/* Sidebar expandida: mostra texto */
+#sidebar.collapsed .link-text {
+    display: inline;
+    margin-left: 6px;         /* deslocamento leve para alinhar com ícones retraídos */
+}
+
+/* Ajuste visual dos links */
+#sidebar:not(.collapsed) .nav-link {
+    text-align: center;       /* centraliza ícones quando retraída */
+    margin-left: 0;
+}
+
+#sidebar.collapsed .nav-link {
+    text-align: left;         /* ícone + texto alinhados à esquerda */
+}
+
+/* Pequeno ajuste para ícones */
+#sidebar .nav-link i {
+    font-size: 18px;
+}
+
+/* Botão toggle */
+#toggle-btn {
+
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+/* Botão toggle sempre centralizado e fixo no topo */
+#toggle-btn {
+    width: 40px;             /* largura fixa do botão */
+    height: 40px;            /* altura fixa */
+    /* centraliza horizontalmente e espaçamento abaixo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 18px;         /* tamanho do símbolo ☰ */
+    border-radius: 5px;
+}
+
+/* Opcional: mantém a cor do botão consistente */
+#toggle-btn.btn-light {
+    background-color: #f8f9fa;
+    color: #000;
 }
