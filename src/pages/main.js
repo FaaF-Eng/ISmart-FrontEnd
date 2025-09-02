@@ -1,3 +1,5 @@
+console.log("JavaScript habilitado");
+
 function decodeUplink(input) {
   var bytes = input.bytes;
   var data = {};
