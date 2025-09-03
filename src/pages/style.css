@@ -126,3 +126,10 @@ html, body {
 .highlight-link i {
   margin-right: 6px;
 }
+
+/*Particular Página Grupos*/
+.buttonsGroups{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
