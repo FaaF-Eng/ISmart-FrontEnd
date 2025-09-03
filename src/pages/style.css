@@ -97,13 +97,6 @@ html, body {
   padding: 20px;
 }
 
-/* Mobile adjustment */
-@media (max-width: 992px) {
-  #sidebar {
-    position: absolute;
-    z-index: 1500;
-  }
-}
 /* Ou apenas ícones dentro da sidebar */
 #sidebar .bi {
   color: #ffb81c;
