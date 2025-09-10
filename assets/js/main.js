@@ -317,3 +317,35 @@
   }
 
 })();
+
+// [ CODE HERE ]
+console.log("JavaScript funciona");
+
+
+//Animation Heart Rate
+
+  function updateHeartRateStatus(value) {
+    const icon = document.getElementById("heartIcon");
+    const status = document.getElementById("heartStatus");
+
+    // resetar classes de cor
+    icon.classList.remove("text-success", "text-warning", "text-danger");
+
+    if (value >= 60 && value <= 100) {
+      status.innerText = "Normal";
+      icon.classList.add("text-success");
+    } else if (value > 100 && value <= 120) {
+      status.innerText = "Atenção";
+      icon.classList.add("text-warning");
+    } else if (value > 120) {
+      status.innerText = "Crítico";
+      icon.classList.add("text-danger");
+    } else {
+      status.innerText = "Fora do intervalo";
+      icon.classList.add("text-secondary");
+    }
+  }
+
+  //simula entrada de dados
+  updateHeartRateStatus(121);   
+  
