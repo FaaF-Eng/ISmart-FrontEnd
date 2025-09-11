@@ -348,7 +348,7 @@ console.log("JavaScript funciona");
   }
 
   //simula entrada de dados
-  updateHeartRateStatus(100);   
+  updateHeartRateStatus(120);   
   
 
   //  [ FUNCTION BLOOD OXYGEN RATE ]
@@ -397,7 +397,7 @@ function updateBodyTemperatureStatus(value) {
   if (value >= 36 && value <= 37.2) {
     status.innerText = "Normal";
     icon.classList.add("bi-thermometer-low", "text-success");
-  } else if ((value >= 35.1 && value < 35.9) || (value >= 37.3 && value <= 37.7)) {
+  } else if ((value >= 35.1 && value <= 35.9) || (value >= 37.3 && value <= 37.7)) {
     status.innerText = "Attention";
     icon.classList.add("bi-thermometer-half", "text-warning");
   } else if (value <= 35.0 && value >=28) {
@@ -413,6 +413,6 @@ function updateBodyTemperatureStatus(value) {
 }
 
 // simula entrada de dados
-updateBodyTemperatureStatus(42); 
+updateBodyTemperatureStatus(37.4); 
 //abaixco de 35.5 caixão
 //38 é critico

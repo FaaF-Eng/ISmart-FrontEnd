@@ -769,16 +769,16 @@ h6 {
 }
 
 .dashboard .filter .icon {
-  color: #aab7cf;
+  color: #ffb81c;
   padding-right: 20px;
   padding-bottom: 5px;
   transition: 0.3s;
-  font-size: 16px;
+  font-size: 22px;
 }
 
 .dashboard .filter .icon:hover,
 .dashboard .filter .icon:focus {
-  color: #ffb81c;
+  color: #005f61;
 }
 
 .dashboard .filter .dropdown-header {
@@ -799,9 +799,10 @@ h6 {
   padding: 8px 15px;
 }
 
-/* Info Cards */
+/* Info Cards FAZER UM HOOVER MAIS TARDE */
 .dashboard .info-card {
   padding-bottom: 10px;
+  
 }
 
 .dashboard .info-card h6 {
@@ -822,7 +823,7 @@ h6 {
 }
 
 .dashboard .sales-card .card-icon {
-  
+
 /*ICONE CARD*/
 }
 
