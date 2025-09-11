@@ -347,5 +347,5 @@ console.log("JavaScript funciona");
   }
 
   //simula entrada de dados
-  updateHeartRateStatus(251);   
+  updateHeartRateStatus(100);   
   
