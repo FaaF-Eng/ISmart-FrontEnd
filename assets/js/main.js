@@ -337,15 +337,15 @@ console.log("JavaScript funciona");
     } else if (value > 100 && value <= 120) {
       status.innerText = "Atenção";
       icon.classList.add("text-warning");
-    } else if (value > 120) {
+    } else if (value > 120 && value <= 250) {
       status.innerText = "Crítico";
       icon.classList.add("text-danger");
     } else {
-      status.innerText = "Fora do intervalo";
+      status.innerText = "Read Error";
       icon.classList.add("text-secondary");
     }
   }
 
   //simula entrada de dados
-  updateHeartRateStatus(140);   
+  updateHeartRateStatus(251);   
   

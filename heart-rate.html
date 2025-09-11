@@ -425,7 +425,7 @@
 
             
             <!-- HR-Group Card -->
-            <div class="col-xxl-4 col-md-6">
+            <div class="col-xxl-4 col-md-6 user-select-none">
               <div class="card info-card sales-card">
 
                 <div class="filter">
@@ -446,13 +446,13 @@
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-heart-pulse text-danger"></i>
+                      <i id="heartIcon" class="bi bi-heart-pulse-fill" style="animation:pulse 1s infinite;"></i>
                     </div>
                     <div class="ps-3">
                       <h6>
                         <!--Heart Rate-->
                         <div class="d-flex align-items-center">
-                          <div id="heartIcon" class="bi bi-heart-fill" style="animation:pulse 1s infinite;"></div>
+                          <div id="heartIcon"></div>
                           <div id="heartStatus" class="ms-2"></div>
                         </div>
                       </h6>
@@ -465,6 +465,12 @@
               </div>
             </div><!-- End HR-Group Card -->
 
+
+
+
+
+
+            
 
 
           </div>

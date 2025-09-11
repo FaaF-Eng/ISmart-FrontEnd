@@ -813,7 +813,7 @@ h6 {
 }
 
 .dashboard .card-icon {
-  font-size: 32px;
+  font-size: 50px;
   line-height: 0;
   width: 64px;
   height: 64px;
@@ -822,8 +822,8 @@ h6 {
 }
 
 .dashboard .sales-card .card-icon {
-  color: #4154f1;
-  background: #f6f6fe;
+  
+/*ICONE CARD*/
 }
 
 .dashboard .revenue-card .card-icon {
