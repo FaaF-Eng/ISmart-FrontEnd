@@ -322,12 +322,13 @@
 console.log("JavaScript funciona");
 
 
-//Animation Heart Rate
+//FUNCTION HEART RATE
 
   function updateHeartRateStatus(value) {
     const icon = document.getElementById("heartIcon");
     const status = document.getElementById("heartStatus");
-
+    // se não existir na página, sai fora
+    if (!icon || !status) return;
     // resetar classes de cor
     icon.classList.remove("text-success", "text-warning", "text-danger");
 
@@ -335,10 +336,10 @@ console.log("JavaScript funciona");
       status.innerText = "Normal";
       icon.classList.add("text-success");
     } else if (value > 100 && value <= 120) {
-      status.innerText = "Atenção";
+      status.innerText = "Attencion";
       icon.classList.add("text-warning");
     } else if (value > 120 && value <= 250) {
-      status.innerText = "Crítico";
+      status.innerText = "Critical";
       icon.classList.add("text-danger");
     } else {
       status.innerText = "Read Error";
@@ -349,3 +350,33 @@ console.log("JavaScript funciona");
   //simula entrada de dados
   updateHeartRateStatus(100);   
   
+
+  //FUNCTION BLOOD OXYGEN RATE
+
+  function updateBloodOxygenStatus(value) {
+    const icon = document.getElementById("bloodOxygenIcon");
+    const status = document.getElementById("bloodOxygenStatus");
+
+    // se não existir na página, sai fora
+    if (!icon || !status) return;
+
+    // resetar classes de cor
+    icon.classList.remove("text-success", "text-warning", "text-danger");
+
+    if (value >= 60 && value <= 100) {
+      status.innerText = "Normal";
+      icon.classList.add("text-success");
+    } else if (value > 100 && value <= 120) {
+      status.innerText = "Attencion";
+      icon.classList.add("text-warning");
+    } else if (value > 120 && value <= 250) {
+      status.innerText = "Critical";
+      icon.classList.add("text-danger");
+    } else {
+      status.innerText = "Read Error";
+      icon.classList.add("text-secondary");
+    }
+  }
+
+  //simula entrada de dados
+  updateBloodOxygenStatus(120);  
