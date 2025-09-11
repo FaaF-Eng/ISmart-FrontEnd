@@ -322,7 +322,7 @@
 console.log("JavaScript funciona");
 
 
-//FUNCTION HEART RATE
+// [ FUNCTION HEART RATE ]
 
   function updateHeartRateStatus(value) {
     const icon = document.getElementById("heartIcon");
@@ -351,7 +351,7 @@ console.log("JavaScript funciona");
   updateHeartRateStatus(100);   
   
 
-  //FUNCTION BLOOD OXYGEN RATE
+  //  [ FUNCTION BLOOD OXYGEN RATE ]
 
   function updateBloodOxygenStatus(value) {
     const icon = document.getElementById("bloodOxygenIcon");
@@ -380,3 +380,39 @@ console.log("JavaScript funciona");
 
   //simula entrada de dados
   updateBloodOxygenStatus(120);  
+
+
+   //  [ FUNCTION BODY TEMPERATURE RATE ]
+
+function updateBodyTemperatureStatus(value) {
+  const icon = document.getElementById("bodyTemperatureIcon");
+  const status = document.getElementById("bodyTemperatureStatus");
+
+  if (!icon || !status) return;
+
+  // resetar classes de cor + ícones
+  icon.className = ""; 
+  icon.classList.add("bi"); // mantém prefixo bi
+
+  if (value >= 36 && value <= 37.2) {
+    status.innerText = "Normal";
+    icon.classList.add("bi-thermometer-low", "text-success");
+  } else if ((value >= 35.1 && value < 35.9) || (value >= 37.3 && value <= 37.7)) {
+    status.innerText = "Attention";
+    icon.classList.add("bi-thermometer-half", "text-warning");
+  } else if (value <= 35.0 && value >=28) {
+    status.innerText = "Critical";
+    icon.classList.add("bi-thermometer-snow", "text-primary");
+  } else if (value >= 37.8 && value <=41) {
+    status.innerText = "Critical";
+    icon.classList.add("bi-thermometer-high", "text-danger");
+  } else {
+    status.innerText = "Read Error";
+    icon.classList.add("bi-thermometer", "text-secondary");
+  }
+}
+
+// simula entrada de dados
+updateBodyTemperatureStatus(42); 
+//abaixco de 35.5 caixão
+//38 é critico
