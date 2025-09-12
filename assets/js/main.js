@@ -324,9 +324,9 @@ console.log("JavaScript funciona");
 
 // [ FUNCTION HEART RATE ]
 
-  function updateHeartRateStatus(value) {
-    const icon = document.getElementById("heartIcon");
-    const status = document.getElementById("heartStatus");
+  function updateHeartRateStatus(value, iconId, statusId) {
+    const icon = document.getElementById(iconId);
+    const status = document.getElementById(statusId);
     // se não existir na página, sai fora
     if (!icon || !status) return;
     // resetar classes de cor
@@ -348,7 +348,9 @@ console.log("JavaScript funciona");
   }
 
   //simula entrada de dados
-  updateHeartRateStatus(120);   
+  updateHeartRateStatus(72, "heartIcon1", "heartStatus1");  
+  updateHeartRateStatus(110, "heartIcon2", "heartStatus2"); 
+  updateHeartRateStatus(140, "heartIcon3", "heartStatus3");   
   
 
   //  [ FUNCTION BLOOD OXYGEN RATE ]
