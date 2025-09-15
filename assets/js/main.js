@@ -366,13 +366,13 @@ console.log("JavaScript funciona");
     // resetar classes de cor
     icon.classList.remove("text-success", "text-warning", "text-danger");
 
-    if (value >= 60 && value <= 100) {
+    if (value >= 95 && value <= 100) {
       status.innerText = "Normal";
       icon.classList.add("text-success");
-    } else if (value > 100 && value <= 120) {
+    } else if (value >= 91  && value <= 94) {
       status.innerText = "Attencion";
       icon.classList.add("text-warning");
-    } else if (value > 120 && value <= 250) {
+    } else if (value >= 50 && value <= 90) {
       status.innerText = "Critical";
       icon.classList.add("text-danger");
     } else {
@@ -382,9 +382,9 @@ console.log("JavaScript funciona");
   }
 
   //simula entrada de dados
-  updatebloodOxygenStatus(120, "bloodOxygenIcon1", "bloodOxygenStatus1");  
-  updatebloodOxygenStatus(120, "bloodOxygenIcon2", "bloodOxygenStatus2"); 
-  updatebloodOxygenStatus(120, "bloodOxygenIcon3", "bloodOxygenStatus3"); 
+  updatebloodOxygenStatus(100, "bloodOxygenIcon1", "bloodOxygenStatus1");  
+  updatebloodOxygenStatus(100, "bloodOxygenIcon2", "bloodOxygenStatus2"); 
+  updatebloodOxygenStatus(100, "bloodOxygenIcon3", "bloodOxygenStatus3"); 
   
 
 
