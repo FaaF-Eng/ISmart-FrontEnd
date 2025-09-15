@@ -422,3 +422,38 @@ function updateBodyTemperatureStatus(value, iconId, statusId) {
   updateBodyTemperatureStatus(38, "bodyTemperatureIcon2", "bodyTemperatureStatus2"); 
   updateBodyTemperatureStatus(35, "bodyTemperatureIcon3", "bodyTemperatureStatus3"); 
   updateBodyTemperatureStatus(35.1, "bodyTemperatureIcon4", "bodyTemperatureStatus4"); 
+
+
+  //  [ FUNCTION RESPIRATION RATE ]
+
+  function updateRespirationRateStatus(value, iconId, statusId) {
+  const icon = document.getElementById(iconId);
+  const status = document.getElementById(statusId);
+
+  if (!icon || !status) return;
+    // se não existir na página, sai fora
+    if (!icon || !status) return;
+
+    // resetar classes de cor
+    icon.classList.remove("text-success", "text-warning", "text-danger");
+
+    if (value >= 12 && value <= 20) {
+      status.innerText = "Normal";
+      icon.classList.add("text-success");
+    } else if (value >= 9 && value <= 11 || value >=21 && value <= 24 ) {
+      status.innerText = "Attencion";
+      icon.classList.add("text-warning");
+    } else if (value <9 && value >4 || value > 24 && value < 60) {
+      status.innerText = "Critical";
+      icon.classList.add("text-danger");
+    } else {
+      status.innerText = "Read Error";
+      icon.classList.add("text-secondary");
+    }
+
+}
+
+  updateRespirationRateStatus(59, "respirationRateIcon1", "respirationRateStatus1");  
+  updateRespirationRateStatus(59, "respirationRateIcon2", "respirationRateStatus2"); 
+  updateRespirationRateStatus(23, "respirationRateIcon3", "respirationRateStatus3"); 
+  updateRespirationRateStatus(12, "respirationRateIcon4", "respirationRateStatus4"); 
