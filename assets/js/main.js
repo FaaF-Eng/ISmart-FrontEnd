@@ -385,6 +385,7 @@ console.log("JavaScript funciona");
   updatebloodOxygenStatus(100, "bloodOxygenIcon1", "bloodOxygenStatus1");  
   updatebloodOxygenStatus(100, "bloodOxygenIcon2", "bloodOxygenStatus2"); 
   updatebloodOxygenStatus(100, "bloodOxygenIcon3", "bloodOxygenStatus3"); 
+  updatebloodOxygenStatus(100, "bloodOxygenIcon4", "bloodOxygenStatus4"); 
   
 
 
@@ -457,3 +458,38 @@ function updateBodyTemperatureStatus(value, iconId, statusId) {
   updateRespirationRateStatus(59, "respirationRateIcon2", "respirationRateStatus2"); 
   updateRespirationRateStatus(23, "respirationRateIcon3", "respirationRateStatus3"); 
   updateRespirationRateStatus(12, "respirationRateIcon4", "respirationRateStatus4"); 
+
+
+    //  [ FUNCTION SYSTOLIC BLOOD PRESSURE ]
+
+  function updateSystolicBloodPressureStatus(value, iconId, statusId) {
+  const icon = document.getElementById(iconId);
+  const status = document.getElementById(statusId);
+
+  if (!icon || !status) return;
+    // se não existir na página, sai fora
+    if (!icon || !status) return;
+
+    // resetar classes de cor
+    icon.classList.remove("text-success", "text-warning", "text-danger");
+
+    if (value >= 90 && value <= 120) {
+      status.innerText = "Normal";
+      icon.classList.add("text-success");
+    } else if (value >= 121 && value <= 139) {
+      status.innerText = "Attencion";
+      icon.classList.add("text-warning");
+    } else if (value >= 60 && value <= 89 || value >= 140 && value <= 250) {
+      status.innerText = "Critical";
+      icon.classList.add("text-danger");
+    } else {
+      status.innerText = "Read Error";
+      icon.classList.add("text-secondary");
+    }
+
+}
+
+  updateSystolicBloodPressureStatus(250, "systolicBloodPressureIcon1", "systolicBloodPressureStatus1");  
+  updateSystolicBloodPressureStatus(100, "systolicBloodPressureIcon2", "systolicBloodPressureStatus2"); 
+  updateSystolicBloodPressureStatus(102, "systolicBloodPressureIcon3", "systolicBloodPressureStatus3"); 
+  updateSystolicBloodPressureStatus(121, "systolicBloodPressureIcon4", "systolicBloodPressureStatus4"); 
