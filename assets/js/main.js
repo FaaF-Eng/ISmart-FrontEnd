@@ -388,29 +388,11 @@ console.log("JavaScript funciona");
   
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   //  [ FUNCTION BODY TEMPERATURE RATE ]
 
-function updateBodyTemperatureStatus(value) {
-  const icon = document.getElementById("bodyTemperatureIcon");
-  const status = document.getElementById("bodyTemperatureStatus");
+function updateBodyTemperatureStatus(value, iconId, statusId) {
+  const icon = document.getElementById(iconId);
+  const status = document.getElementById(statusId);
 
   if (!icon || !status) return;
 
@@ -436,7 +418,7 @@ function updateBodyTemperatureStatus(value) {
   }
 }
 
-// simula entrada de dados
-updateBodyTemperatureStatus(37.4); 
-//abaixco de 35.5 caixão
-//38 é critico
+  updateBodyTemperatureStatus(36, "bodyTemperatureIcon1", "bodyTemperatureStatus1");  
+  updateBodyTemperatureStatus(38, "bodyTemperatureIcon2", "bodyTemperatureStatus2"); 
+  updateBodyTemperatureStatus(35, "bodyTemperatureIcon3", "bodyTemperatureStatus3"); 
+  updateBodyTemperatureStatus(35.1, "bodyTemperatureIcon4", "bodyTemperatureStatus4"); 
