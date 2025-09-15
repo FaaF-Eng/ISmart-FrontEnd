@@ -493,3 +493,38 @@ function updateBodyTemperatureStatus(value, iconId, statusId) {
   updateSystolicBloodPressureStatus(100, "systolicBloodPressureIcon2", "systolicBloodPressureStatus2"); 
   updateSystolicBloodPressureStatus(102, "systolicBloodPressureIcon3", "systolicBloodPressureStatus3"); 
   updateSystolicBloodPressureStatus(121, "systolicBloodPressureIcon4", "systolicBloodPressureStatus4"); 
+
+
+  //  [ FUNCTION DIASTOLIC BLOOD PRESSURE ]
+
+  function updateDiastolicBloodPressureStatus(value, iconId, statusId) {
+  const icon = document.getElementById(iconId);
+  const status = document.getElementById(statusId);
+
+  if (!icon || !status) return;
+    // se não existir na página, sai fora
+    if (!icon || !status) return;
+
+    // resetar classes de cor
+    icon.classList.remove("text-success", "text-warning", "text-danger");
+
+    if (value >= 60 && value <= 80) {
+      status.innerText = "Normal";
+      icon.classList.add("text-success");
+    } else if (value >= 81 && value <= 89) {
+      status.innerText = "Attencion";
+      icon.classList.add("text-warning");
+    } else if (value >= 40 && value <= 59 || value >= 90 && value <= 150) {
+      status.innerText = "Critical";
+      icon.classList.add("text-danger");
+    } else {
+      status.innerText = "Read Error";
+      icon.classList.add("text-secondary");
+    }
+
+}
+
+  updateDiastolicBloodPressureStatus(150, "diastolicBloodPressureIcon1", "diastolicBloodPressureStatus1");  
+  updateDiastolicBloodPressureStatus(100, "diastolicBloodPressureIcon2", "diastolicBloodPressureStatus2"); 
+  updateDiastolicBloodPressureStatus(102, "diastolicBloodPressureIcon3", "diastolicBloodPressureStatus3"); 
+  updateDiastolicBloodPressureStatus(121, "diastolicBloodPressureIcon4", "diastolicBloodPressureStatus4"); 
