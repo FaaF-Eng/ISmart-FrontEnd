@@ -318,7 +318,9 @@
 
 })();
 
+
 // [ CODE HERE ]
+
 console.log("JavaScript funciona");
 
 
@@ -351,13 +353,12 @@ console.log("JavaScript funciona");
   updateHeartRateStatus(72, "heartIcon1", "heartStatus1");  
   updateHeartRateStatus(110, "heartIcon2", "heartStatus2"); 
   updateHeartRateStatus(140, "heartIcon3", "heartStatus3");   
-  
 
   //  [ FUNCTION BLOOD OXYGEN RATE ]
 
-  function updateBloodOxygenStatus(value) {
-    const icon = document.getElementById("bloodOxygenIcon");
-    const status = document.getElementById("bloodOxygenStatus");
+    function updatebloodOxygenStatus(value, iconId, statusId) {
+    const icon = document.getElementById(iconId);
+    const status = document.getElementById(statusId);
 
     // se não existir na página, sai fora
     if (!icon || !status) return;
@@ -381,10 +382,31 @@ console.log("JavaScript funciona");
   }
 
   //simula entrada de dados
-  updateBloodOxygenStatus(120);  
+  updatebloodOxygenStatus(120, "bloodOxygenIcon1", "bloodOxygenStatus1");  
+  updatebloodOxygenStatus(120, "bloodOxygenIcon2", "bloodOxygenStatus2"); 
+  updatebloodOxygenStatus(120, "bloodOxygenIcon3", "bloodOxygenStatus3"); 
+  
 
 
-   //  [ FUNCTION BODY TEMPERATURE RATE ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //  [ FUNCTION BODY TEMPERATURE RATE ]
 
 function updateBodyTemperatureStatus(value) {
   const icon = document.getElementById("bodyTemperatureIcon");
