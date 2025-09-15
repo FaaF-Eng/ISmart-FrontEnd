@@ -326,205 +326,193 @@ console.log("JavaScript funciona");
 
 // [ FUNCTION HEART RATE ]
 
-  function updateHeartRateStatus(value, iconId, statusId) {
-    const icon = document.getElementById(iconId);
-    const status = document.getElementById(statusId);
-    // se não existir na página, sai fora
-    if (!icon || !status) return;
-    // resetar classes de cor
-    icon.classList.remove("text-success", "text-warning", "text-danger");
+function updateHeartRateStatus(value, iconId, statusId) {
+  const icon = document.getElementById(iconId);
+  const status = document.getElementById(statusId);
+  // se não existir na página, sai fora
+  if (!icon || !status) return;
+  // resetar classes de cor
+  icon.classList.remove("text-success", "text-warning", "text-danger");
 
-    if (value >= 60 && value <= 100) {
-      status.innerText = "Normal";
-      icon.classList.add("text-success");
-    } else if (value > 100 && value <= 120) {
-      status.innerText = "Attencion";
-      icon.classList.add("text-warning");
-    } else if (value > 120 && value <= 250) {
-      status.innerText = "Critical";
-      icon.classList.add("text-danger");
-    } else {
-      status.innerText = "Read Error";
-      icon.classList.add("text-secondary");
-    }
+  if (value >= 60 && value <= 100) {
+    status.innerText = "Normal";
+    icon.classList.add("text-success");
+  } else if (value > 100 && value <= 120) {
+    status.innerText = "Attencion";
+    icon.classList.add("text-warning");
+  } else if (value > 120 && value <= 250) {
+    status.innerText = "Critical";
+    icon.classList.add("text-danger");
+  } else {
+    status.innerText = "Read Error";
+    icon.classList.add("text-secondary");
   }
+}
+//simula entrada de dados
+updateHeartRateStatus(72, "heartIcon1", "heartStatus1");  
+updateHeartRateStatus(110, "heartIcon2", "heartStatus2"); 
+updateHeartRateStatus(140, "heartIcon3", "heartStatus3");   
+updateHeartRateStatus(1400, "heartIcon4", "heartStatus4");
 
-  //simula entrada de dados
-  updateHeartRateStatus(72, "heartIcon1", "heartStatus1");  
-  updateHeartRateStatus(110, "heartIcon2", "heartStatus2"); 
-  updateHeartRateStatus(140, "heartIcon3", "heartStatus3");   
 
-  //  [ FUNCTION BLOOD OXYGEN RATE ]
+//  [ FUNCTION BLOOD OXYGEN RATE ]
 
-    function updatebloodOxygenStatus(value, iconId, statusId) {
-    const icon = document.getElementById(iconId);
-    const status = document.getElementById(statusId);
+function updatebloodOxygenStatus(value, iconId, statusId) {
+const icon = document.getElementById(iconId);
+const status = document.getElementById(statusId);
+// se não existir na página, sai fora
+if (!icon || !status) return;
+// resetar classes de cor
+icon.classList.remove("text-success", "text-warning", "text-danger");
 
-    // se não existir na página, sai fora
-    if (!icon || !status) return;
+if (value >= 95 && value <= 100) {
+  status.innerText = "Normal";
+  icon.classList.add("text-success");
+} else if (value >= 91  && value <= 94) {
+  status.innerText = "Attencion";
+  icon.classList.add("text-warning");
+} else if (value >= 50 && value <= 90) {
+  status.innerText = "Critical";
+  icon.classList.add("text-danger");
+} else {
+  status.innerText = "Read Error";
+  icon.classList.add("text-secondary");
+}
+}
+//simula entrada de dados
+updatebloodOxygenStatus(100, "bloodOxygenIcon1", "bloodOxygenStatus1");  
+updatebloodOxygenStatus(100, "bloodOxygenIcon2", "bloodOxygenStatus2"); 
+updatebloodOxygenStatus(100, "bloodOxygenIcon3", "bloodOxygenStatus3"); 
+updatebloodOxygenStatus(100, "bloodOxygenIcon4", "bloodOxygenStatus4"); 
+  
 
-    // resetar classes de cor
-    icon.classList.remove("text-success", "text-warning", "text-danger");
+//  [ FUNCTION RESPIRATION RATE ]
 
-    if (value >= 95 && value <= 100) {
-      status.innerText = "Normal";
-      icon.classList.add("text-success");
-    } else if (value >= 91  && value <= 94) {
-      status.innerText = "Attencion";
-      icon.classList.add("text-warning");
-    } else if (value >= 50 && value <= 90) {
-      status.innerText = "Critical";
-      icon.classList.add("text-danger");
-    } else {
-      status.innerText = "Read Error";
-      icon.classList.add("text-secondary");
-    }
+function updateRespirationRateStatus(value, iconId, statusId) {
+const icon = document.getElementById(iconId);
+const status = document.getElementById(statusId);
+if (!icon || !status) return;
+// se não existir na página, sai fora
+if (!icon || !status) return;
+// resetar classes de cor
+icon.classList.remove("text-success", "text-warning", "text-danger");
+
+if (value >= 12 && value <= 20) {
+  status.innerText = "Normal";
+  icon.classList.add("text-success");
+} else if (value >= 9 && value <= 11 || value >=21 && value <= 24 ) {
+  status.innerText = "Attencion";
+  icon.classList.add("text-warning");
+} else if (value <9 && value >4 || value > 24 && value < 60) {
+  status.innerText = "Critical";
+  icon.classList.add("text-danger");
+} else {
+  status.innerText = "Read Error";
+  icon.classList.add("text-secondary");
+}
+}
+updateRespirationRateStatus(59, "respirationRateIcon1", "respirationRateStatus1");  
+updateRespirationRateStatus(59, "respirationRateIcon2", "respirationRateStatus2"); 
+updateRespirationRateStatus(23, "respirationRateIcon3", "respirationRateStatus3"); 
+updateRespirationRateStatus(12, "respirationRateIcon4", "respirationRateStatus4"); 
+
+
+ //  [ FUNCTION SYSTOLIC BLOOD PRESSURE ]
+
+function updateSystolicBloodPressureStatus(value, iconId, statusId) {
+const icon = document.getElementById(iconId);
+const status = document.getElementById(statusId);
+if (!icon || !status) return;
+  // se não existir na página, sai fora
+  if (!icon || !status) return;
+  // resetar classes de cor
+  icon.classList.remove("text-success", "text-warning", "text-danger");
+
+  if (value >= 90 && value <= 120) {
+    status.innerText = "Normal";
+    icon.classList.add("text-success");
+  } else if (value >= 121 && value <= 139) {
+    status.innerText = "Attencion";
+    icon.classList.add("text-warning");
+  } else if (value >= 60 && value <= 89 || value >= 140 && value <= 250) {
+    status.innerText = "Critical";
+    icon.classList.add("text-danger");
+  } else {
+    status.innerText = "Read Error";
+    icon.classList.add("text-secondary");
   }
+}
+updateSystolicBloodPressureStatus(250, "systolicBloodPressureIcon1", "systolicBloodPressureStatus1");  
+updateSystolicBloodPressureStatus(100, "systolicBloodPressureIcon2", "systolicBloodPressureStatus2"); 
+updateSystolicBloodPressureStatus(102, "systolicBloodPressureIcon3", "systolicBloodPressureStatus3"); 
+updateSystolicBloodPressureStatus(121, "systolicBloodPressureIcon4", "systolicBloodPressureStatus4"); 
 
-  //simula entrada de dados
-  updatebloodOxygenStatus(100, "bloodOxygenIcon1", "bloodOxygenStatus1");  
-  updatebloodOxygenStatus(100, "bloodOxygenIcon2", "bloodOxygenStatus2"); 
-  updatebloodOxygenStatus(100, "bloodOxygenIcon3", "bloodOxygenStatus3"); 
-  updatebloodOxygenStatus(100, "bloodOxygenIcon4", "bloodOxygenStatus4"); 
+
+//  [ FUNCTION DIASTOLIC BLOOD PRESSURE ]
+
+function updateDiastolicBloodPressureStatus(value, iconId, statusId) {
+const icon = document.getElementById(iconId);
+const status = document.getElementById(statusId);
+if (!icon || !status) return;
+  // se não existir na página, sai fora
+  if (!icon || !status) return;
+  // resetar classes de cor
+  icon.classList.remove("text-success", "text-warning", "text-danger");
+
+  if (value >= 60 && value <= 80) {
+    status.innerText = "Normal";
+    icon.classList.add("text-success");
+  } else if (value >= 81 && value <= 89) {
+    status.innerText = "Attencion";
+    icon.classList.add("text-warning");
+  } else if (value >= 40 && value <= 59 || value >= 90 && value <= 150) {
+    status.innerText = "Critical";
+    icon.classList.add("text-danger");
+  } else {
+    status.innerText = "Read Error";
+    icon.classList.add("text-secondary");
+  }
+}
+updateDiastolicBloodPressureStatus(150, "diastolicBloodPressureIcon1", "diastolicBloodPressureStatus1");  
+updateDiastolicBloodPressureStatus(100, "diastolicBloodPressureIcon2", "diastolicBloodPressureStatus2"); 
+updateDiastolicBloodPressureStatus(102, "diastolicBloodPressureIcon3", "diastolicBloodPressureStatus3"); 
+updateDiastolicBloodPressureStatus(121, "diastolicBloodPressureIcon4", "diastolicBloodPressureStatus4"); 
+
+
+//  [ FUNCTION BODY TEMPERATURE RATE ]
+
+function updateBodyTemperatureStatus(value, iconId, statusId) {
+const icon = document.getElementById(iconId);
+const status = document.getElementById(statusId);
+if (!icon || !status) return;
+// resetar classes de cor + ícones
+icon.className = ""; 
+icon.classList.add("bi"); // mantém prefixo bi
+
+if (value >= 36 && value <= 37.2) {
+status.innerText = "Normal";
+icon.classList.add("bi-thermometer-low", "text-success");
+} else if ((value >= 35.1 && value <= 35.9) || (value >= 37.3 && value <= 37.7)) {
+status.innerText = "Attention";
+icon.classList.add("bi-thermometer-half", "text-warning");
+} else if (value <= 35.0 && value >=28) {
+status.innerText = "Critical";
+icon.classList.add("bi-thermometer-snow", "text-primary");
+} else if (value >= 37.8 && value <=41) {
+status.innerText = "Critical";
+icon.classList.add("bi-thermometer-high", "text-danger");
+} else {
+status.innerText = "Read Error";
+icon.classList.add("bi-thermometer", "text-secondary");
+}
+}
+updateBodyTemperatureStatus(36, "bodyTemperatureIcon1", "bodyTemperatureStatus1");  
+updateBodyTemperatureStatus(38, "bodyTemperatureIcon2", "bodyTemperatureStatus2"); 
+updateBodyTemperatureStatus(35, "bodyTemperatureIcon3", "bodyTemperatureStatus3"); 
+updateBodyTemperatureStatus(35.1, "bodyTemperatureIcon4", "bodyTemperatureStatus4"); 
+
+
   
 
 
-  //  [ FUNCTION BODY TEMPERATURE RATE ]
-
-function updateBodyTemperatureStatus(value, iconId, statusId) {
-  const icon = document.getElementById(iconId);
-  const status = document.getElementById(statusId);
-
-  if (!icon || !status) return;
-
-  // resetar classes de cor + ícones
-  icon.className = ""; 
-  icon.classList.add("bi"); // mantém prefixo bi
-
-  if (value >= 36 && value <= 37.2) {
-    status.innerText = "Normal";
-    icon.classList.add("bi-thermometer-low", "text-success");
-  } else if ((value >= 35.1 && value <= 35.9) || (value >= 37.3 && value <= 37.7)) {
-    status.innerText = "Attention";
-    icon.classList.add("bi-thermometer-half", "text-warning");
-  } else if (value <= 35.0 && value >=28) {
-    status.innerText = "Critical";
-    icon.classList.add("bi-thermometer-snow", "text-primary");
-  } else if (value >= 37.8 && value <=41) {
-    status.innerText = "Critical";
-    icon.classList.add("bi-thermometer-high", "text-danger");
-  } else {
-    status.innerText = "Read Error";
-    icon.classList.add("bi-thermometer", "text-secondary");
-  }
-}
-
-  updateBodyTemperatureStatus(36, "bodyTemperatureIcon1", "bodyTemperatureStatus1");  
-  updateBodyTemperatureStatus(38, "bodyTemperatureIcon2", "bodyTemperatureStatus2"); 
-  updateBodyTemperatureStatus(35, "bodyTemperatureIcon3", "bodyTemperatureStatus3"); 
-  updateBodyTemperatureStatus(35.1, "bodyTemperatureIcon4", "bodyTemperatureStatus4"); 
-
-
-  //  [ FUNCTION RESPIRATION RATE ]
-
-  function updateRespirationRateStatus(value, iconId, statusId) {
-  const icon = document.getElementById(iconId);
-  const status = document.getElementById(statusId);
-
-  if (!icon || !status) return;
-    // se não existir na página, sai fora
-    if (!icon || !status) return;
-
-    // resetar classes de cor
-    icon.classList.remove("text-success", "text-warning", "text-danger");
-
-    if (value >= 12 && value <= 20) {
-      status.innerText = "Normal";
-      icon.classList.add("text-success");
-    } else if (value >= 9 && value <= 11 || value >=21 && value <= 24 ) {
-      status.innerText = "Attencion";
-      icon.classList.add("text-warning");
-    } else if (value <9 && value >4 || value > 24 && value < 60) {
-      status.innerText = "Critical";
-      icon.classList.add("text-danger");
-    } else {
-      status.innerText = "Read Error";
-      icon.classList.add("text-secondary");
-    }
-
-}
-
-  updateRespirationRateStatus(59, "respirationRateIcon1", "respirationRateStatus1");  
-  updateRespirationRateStatus(59, "respirationRateIcon2", "respirationRateStatus2"); 
-  updateRespirationRateStatus(23, "respirationRateIcon3", "respirationRateStatus3"); 
-  updateRespirationRateStatus(12, "respirationRateIcon4", "respirationRateStatus4"); 
-
-
-    //  [ FUNCTION SYSTOLIC BLOOD PRESSURE ]
-
-  function updateSystolicBloodPressureStatus(value, iconId, statusId) {
-  const icon = document.getElementById(iconId);
-  const status = document.getElementById(statusId);
-
-  if (!icon || !status) return;
-    // se não existir na página, sai fora
-    if (!icon || !status) return;
-
-    // resetar classes de cor
-    icon.classList.remove("text-success", "text-warning", "text-danger");
-
-    if (value >= 90 && value <= 120) {
-      status.innerText = "Normal";
-      icon.classList.add("text-success");
-    } else if (value >= 121 && value <= 139) {
-      status.innerText = "Attencion";
-      icon.classList.add("text-warning");
-    } else if (value >= 60 && value <= 89 || value >= 140 && value <= 250) {
-      status.innerText = "Critical";
-      icon.classList.add("text-danger");
-    } else {
-      status.innerText = "Read Error";
-      icon.classList.add("text-secondary");
-    }
-
-}
-
-  updateSystolicBloodPressureStatus(250, "systolicBloodPressureIcon1", "systolicBloodPressureStatus1");  
-  updateSystolicBloodPressureStatus(100, "systolicBloodPressureIcon2", "systolicBloodPressureStatus2"); 
-  updateSystolicBloodPressureStatus(102, "systolicBloodPressureIcon3", "systolicBloodPressureStatus3"); 
-  updateSystolicBloodPressureStatus(121, "systolicBloodPressureIcon4", "systolicBloodPressureStatus4"); 
-
-
-  //  [ FUNCTION DIASTOLIC BLOOD PRESSURE ]
-
-  function updateDiastolicBloodPressureStatus(value, iconId, statusId) {
-  const icon = document.getElementById(iconId);
-  const status = document.getElementById(statusId);
-
-  if (!icon || !status) return;
-    // se não existir na página, sai fora
-    if (!icon || !status) return;
-
-    // resetar classes de cor
-    icon.classList.remove("text-success", "text-warning", "text-danger");
-
-    if (value >= 60 && value <= 80) {
-      status.innerText = "Normal";
-      icon.classList.add("text-success");
-    } else if (value >= 81 && value <= 89) {
-      status.innerText = "Attencion";
-      icon.classList.add("text-warning");
-    } else if (value >= 40 && value <= 59 || value >= 90 && value <= 150) {
-      status.innerText = "Critical";
-      icon.classList.add("text-danger");
-    } else {
-      status.innerText = "Read Error";
-      icon.classList.add("text-secondary");
-    }
-
-}
-
-  updateDiastolicBloodPressureStatus(150, "diastolicBloodPressureIcon1", "diastolicBloodPressureStatus1");  
-  updateDiastolicBloodPressureStatus(100, "diastolicBloodPressureIcon2", "diastolicBloodPressureStatus2"); 
-  updateDiastolicBloodPressureStatus(102, "diastolicBloodPressureIcon3", "diastolicBloodPressureStatus3"); 
-  updateDiastolicBloodPressureStatus(121, "diastolicBloodPressureIcon4", "diastolicBloodPressureStatus4"); 
+   
