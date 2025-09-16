@@ -319,7 +319,7 @@
 })();
 
 
-// [ CODE HERE ]
+//------------------------------CODE HERE---------------------------------------- ]
 
 console.log("JavaScript funciona");
 
@@ -545,4 +545,33 @@ updateSkinTemperatureStatus(35, "skinTemperatureIcon3", "skinTemperatureStatus3"
 updateSkinTemperatureStatus(3, "skinTemperatureIcon4", "skinTemperatureStatus4"); 
 
 
-   
+// [ FUNCTION HEART RATE VARIABILITY ]
+
+function updateHeartRateVStatus(value, iconId, statusId) {
+  const icon = document.getElementById(iconId);
+  const status = document.getElementById(statusId);
+  // se não existir na página, sai fora
+  if (!icon || !status) return;
+// resetar classes de cor + ícones
+icon.className = ""; 
+icon.classList.add("bi"); // mantém prefixo bi
+
+if (value >= 50 && value <= 100) {
+status.innerText = "Normal";
+icon.classList.add("bi-graph-up", "text-success");
+} else if ((value >= 30 && value <= 49 || value >=101 && value <=150)) {
+status.innerText = "Attention";
+icon.classList.add("bi-graph-up", "text-warning");
+} else if (value >=151 && value <= 250 || value >= 10 && value <= 29) {
+status.innerText = "Critical";
+icon.classList.add("bi-graph-down", "text-danger");
+} else {
+status.innerText = "Read Error";
+icon.classList.add("bi-slash-circle-fill", "text-secondary");
+}
+}
+//simula entrada de dados
+updateHeartRateVStatus(100, "heartRVIcon1", "heartRVStatus1");  
+updateHeartRateVStatus(100, "heartRVIcon2", "heartRVStatus2"); 
+updateHeartRateVStatus(100, "heartRVIcon3", "heartRVStatus3");   
+updateHeartRateVStatus(100, "heartRVIcon4", "heartRVStatus4");
