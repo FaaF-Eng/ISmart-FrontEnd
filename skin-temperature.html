@@ -1,5 +1,3 @@
-<!--PÁGINA INICIAL - DASHBOARD-->
-
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -46,7 +44,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="dashboard.html" class="logo d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block"></span>
       </a>
@@ -144,72 +142,6 @@
 
         </li><!-- End Notification Nav -->
 
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-chat-left-text"></i>
-            <span class="badge bg-success badge-number">3</span>
-          </a><!-- End Messages Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-            <li class="dropdown-header">
-              You have 3 new messages
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Maria Hudson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>4 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Anna Nelson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>6 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>David Muldon</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>8 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="dropdown-footer">
-              <a href="#">Show all messages</a>
-            </li>
-
-          </ul><!-- End Messages Dropdown Items -->
-
-        </li><!-- End Messages Nav -->
-
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
@@ -277,7 +209,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="dashboard.html">
+        <a class="nav-link " href="index.html">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -291,81 +223,89 @@
         <ul id="components-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
             <a href="heart-rate.html">
-              <i class="bi bi-circle"></i><span>Heart Rate</span>
+              <i class="bi bi-heart-pulse fs-6"></i><span>Heart Rate</span>
             </a>
           </li>
           <li>
             <a href="blood-oxygen.html">
-              <i class="bi bi-circle"></i><span>Blood Oxygen</span>
+              <i class="bi bi-droplet fs-6"></i><span>Blood Oxygen</span>
             </a>
           </li>
           <li>
             <a href="respiration-rate.html">
-              <i class="bi bi-circle"></i><span>Respiration Rate</span>
+              <i class="bi bi-wind fs-6"></i><span>Respiration Rate</span>
             </a>
           </li>
           <li>
             <a href="systolic-blood-pressure.html">
-              <i class="bi bi-circle"></i><span>Systolic Blood Pressure</span>
+              <i class="bi-droplet-fill fs-6 fs-6"></i><span>Systolic Blood Pressure</span>
             </a>
           </li>
           <li>
             <a href="diastolic-blood-pressure.html">
-              <i class="bi bi-circle"></i><span>Diastolic Blood Pressure</span>
+              <i class="bi-droplet-half fs-6"></i><span>Diastolic Blood Pressure</span>
             </a>
           </li>
           <li>
             <a href="body-temperature.html">
-              <i class="bi bi-circle"></i><span>Body Temperature</span>
+              <i class="bi bi-thermometer-half fs-6"></i><span>Body Temperature</span>  
             </a>
           </li>
           <li>
-            <a href="skin-temperature.html" class="active">
-              <i class="bi bi-circle"></i><span>Skin Temperature</span>
+            <a href="skin-temperature.html">
+              <i class="bi-emoji-smile fs-6"></i><span>Skin Temperature</span>
             </a>
           </li>
           <li>
             <a href="heart-rate-variability.html">
-              <i class="bi bi-circle"></i><span>Heart Rate Variability</span>
+              <i class="bi-graph-up fs-6"></i><span>Heart Rate Variability</span>
             </a>
           </li>
           <li>
             <a href="sos-alert.html">
-              <i class="bi bi-circle"></i><span>SOS Alert</span>
+              <i class="bi bi-exclamation-octagon-fill text-danger fs-6"></i><span>SOS Alert</span>
             </a>
           </li>
           <li>
             <a href="fall-detection.html">
-              <i class="bi bi-circle"></i><span>Fall Detection</span>
+              <i class="bi bi-arrow-down-circle fs-6"></i><span>Fall Detection</span>
             </a>
           </li>
           <li>
             <a href="stress-level.html">
-              <i class="bi bi-circle"></i><span>Stress Level</span>
+              <i class="bi bi-emoji-frown fs-6"></i><span>Stress Level</span>
             </a>
           </li>
           <li>
             <a href="activity-level.html">
-              <i class="bi bi-circle"></i><span>Activity Level</span>
+              <i class="bi bi-person-up fs-6"></i><span>Activity Level</span>
             </a>
           </li>
           <li>
             <a href="step-count.html">
-              <i class="bi bi-circle"></i><span>Step Count</span>
+              <i class="bi bi-person-walking  fs-6"></i><span>Step Count</span>
             </a>
           </li>
           <li>
             <a href="calories-burned.html">
-              <i class="bi bi-circle"></i><span>Calories Burned</span>
+              <i class="bi bi-fire fs-6"></i><span>Calories Burned</span>
             </a>
           </li>
           <li>
             <a href="baterry.html">
-              <i class="bi bi-circle"></i><span>Baterry</span>
+              <i class="bi bi-battery-half fs-6"></i><span>Baterry</span>
             </a>
           </li>
         </ul>
       </li><!-- End Monitoring NAV-->
+
+      <!--GROUPS-->
+      <li class="nav-item">
+        <a class="nav-link collapsed"  href="groups.html">
+          <i class="bi bi-box"></i><span>Groups</span><i ></i>
+        </a>
+      </li><!-- End GROUPS NAV-->
+
 
 
 
@@ -402,7 +342,7 @@
       <h1>Skin Temperature</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item active">Dashboard</li>
         </ol>
       </nav>
