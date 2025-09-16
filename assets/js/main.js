@@ -512,7 +512,37 @@ updateBodyTemperatureStatus(35, "bodyTemperatureIcon3", "bodyTemperatureStatus3"
 updateBodyTemperatureStatus(35.1, "bodyTemperatureIcon4", "bodyTemperatureStatus4"); 
 
 
-  
+//  [ FUNCTION SKIN TEMPERATURE RATE ]
+
+function updateSkinTemperatureStatus(value, iconId, statusId) {
+const icon = document.getElementById(iconId);
+const status = document.getElementById(statusId);
+if (!icon || !status) return;
+// resetar classes de cor + ícones
+icon.className = ""; 
+icon.classList.add("bi"); // mantém prefixo bi
+
+if (value >= 31 && value <= 35) {
+status.innerText = "Normal";
+icon.classList.add("bi-emoji-smile-fill", "text-success");
+} else if ((value >= 28 && value < 31)) {
+status.innerText = "Attention";
+icon.classList.add("bi-emoji-neutral-fill", "text-warning");
+} else if (value < 28 && value >= 20) {
+status.innerText = "Critical";
+icon.classList.add("bi-emoji-grimace-fill", "text-primary");
+} else if (value > 35 && value < 40) {
+status.innerText = "Critical";
+icon.classList.add("bi-emoji-tear-fill", "text-danger");
+} else {
+status.innerText = "Read Error";
+icon.classList.add("bi-emoji-expressionless-fill", "text-secondary");
+}
+}
+updateSkinTemperatureStatus(20, "skinTemperatureIcon1", "skinTemperatureStatus1");  
+updateSkinTemperatureStatus(38, "skinTemperatureIcon2", "skinTemperatureStatus2"); 
+updateSkinTemperatureStatus(35, "skinTemperatureIcon3", "skinTemperatureStatus3"); 
+updateSkinTemperatureStatus(3, "skinTemperatureIcon4", "skinTemperatureStatus4"); 
 
 
    
