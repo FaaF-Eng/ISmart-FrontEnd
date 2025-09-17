@@ -383,7 +383,7 @@ if (value >= 95 && value <= 100) {
 updatebloodOxygenStatus(100, "bloodOxygenIcon1", "bloodOxygenStatus1");  
 updatebloodOxygenStatus(100, "bloodOxygenIcon2", "bloodOxygenStatus2"); 
 updatebloodOxygenStatus(100, "bloodOxygenIcon3", "bloodOxygenStatus3"); 
-updatebloodOxygenStatus(100, "bloodOxygenIcon4", "bloodOxygenStatus4"); 
+updatebloodOxygenStatus(100, "bloodOxygenIcon4", "bloodOxygenStatus4");
   
 
 //  [ FUNCTION RESPIRATION RATE ]
