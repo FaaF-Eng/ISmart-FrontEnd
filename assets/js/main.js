@@ -575,3 +575,32 @@ updateHeartRateVStatus(100, "heartRVIcon1", "heartRVStatus1");
 updateHeartRateVStatus(100, "heartRVIcon2", "heartRVStatus2"); 
 updateHeartRateVStatus(100, "heartRVIcon3", "heartRVStatus3");   
 updateHeartRateVStatus(100, "heartRVIcon4", "heartRVStatus4");
+
+
+// [ FUNCTION FALL DETECTION ]
+
+function updateFallDetectionStatus(value, iconId, statusId) {
+  const icon = document.getElementById(iconId);
+  const status = document.getElementById(statusId);
+  // se não existir na página, sai fora
+  if (!icon || !status) return;
+// resetar classes de cor + ícones
+icon.className = ""; 
+icon.classList.add("bi"); // mantém prefixo bi
+
+if (value == 1) {
+status.innerText = "Normal";
+icon.classList.add("bi-person-check-fill", "text-success");
+} else if (value == 0) {
+status.innerText = "Critical";
+icon.classList.add("bi-person-fill-exclamation", "text-danger");
+} else {
+status.innerText = "Read Error";
+icon.classList.add("bi-slash-circle-fill", "text-secondary");
+}
+}
+//simula entrada de dados
+updateFallDetectionStatus(0, "fallIcon1", "fallStatus1");  
+updateFallDetectionStatus(1, "fallIcon2", "fallStatus2"); 
+updateFallDetectionStatus(1, "fallIcon3", "fallStatus3");   
+updateFallDetectionStatus(1, "fallIcon4", "fallStatus4");
