@@ -577,6 +577,22 @@ updateHeartRateVStatus(100, "heartRVIcon3", "heartRVStatus3");
 updateHeartRateVStatus(100, "heartRVIcon4", "heartRVStatus4");
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // [ FUNCTION FALL DETECTION ]
 
 function updateFallDetectionStatus(value, iconId, statusId) {
@@ -587,7 +603,7 @@ function updateFallDetectionStatus(value, iconId, statusId) {
 // resetar classes de cor + ícones
 icon.className = ""; 
 icon.classList.add("bi"); // mantém prefixo bi
-
+ 
 if (value == 1) {
 status.innerText = "Normal";
 icon.classList.add("bi-person-check-fill", "text-success");
@@ -596,11 +612,18 @@ status.innerText = "Critical";
 icon.classList.add("bi-person-fill-exclamation", "text-danger");
 } else {
 status.innerText = "Read Error";
-icon.classList.add("bi-slash-circle-fill", "text-secondary");
+icon.classList.add("bi-person-fill-gear", "text-secondary");
 }
 }
 //simula entrada de dados
 updateFallDetectionStatus(0, "fallIcon1", "fallStatus1");  
-updateFallDetectionStatus(1, "fallIcon2", "fallStatus2"); 
+updateFallDetectionStatus(2, "fallIcon2", "fallStatus2"); 
 updateFallDetectionStatus(1, "fallIcon3", "fallStatus3");   
 updateFallDetectionStatus(1, "fallIcon4", "fallStatus4");
+
+
+
+
+
+
+
